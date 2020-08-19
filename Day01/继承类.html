@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //创建一个类
+        // class Father{
+        //     constructor(){}
+        //     money(){
+        //         console.log(100);
+        //     }
+        // }
+        // //创建一个类用于继承
+        // class Son extends Father{};
+        // var son = new Son();
+        // son.money();
+
+        //super关键字 
+        class Father{
+            constructor(x,y){
+                this.x = x;
+                this.y = y;
+            }
+            sum(){
+                console.log(this.x+this.y);
+            }
+        }
+        //调用super关键字 调用 父类的 构造器  这样this的指向没有错误 使用的是父类的this.x和this.y；
+        class Son extends Father{
+            constructor(x,y){//接收参数传递给supper
+                super(x,y);//super向上调用 父类的  constructor  并输入接收到的x,y；
+            }
+        }
+        var son = new Son(1,2);
+        son.sum();
+    </script>
+</body>
+</html>

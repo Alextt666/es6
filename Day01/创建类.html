@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+       class Star{
+           constructor(uname,age){
+                    //共有的属性放到构造器内
+                   this.uname = uname;
+                   this.age = age;
+           }
+           //无需逗号分隔
+           //类里面所有的函数（方法）不需要添加function 
+           sing(song){
+               console.log(this.uname+song);;
+           }
+       }
+       //利用类创建对象 new
+       var ldh = new Star('刘德华',18);
+       var zxy = new Star('张学友',20);
+       console.log(ldh);
+       console.log(zxy);
+       ldh.sing('冰雨');
+       zxy.sing('李香兰')
+    </script>
+</body>
+
+</html>

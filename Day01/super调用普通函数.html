@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>super</title>
+</head>
+<body>
+    <script>
+        class Father{
+            say(){
+                return '我是Father'
+            }
+        }
+        class Son extends Father{
+            //如果想要在父类的基础上 改变方法可以用super
+            say(){
+                console.log(super.say()+'的儿子');
+            }
+        }
+        var son = new Son();
+        son.say();
+
+        //创建一个类
+        // class Father{
+        //     constructor(){}
+        //     money(){
+        //         console.log(100);
+        //     }
+        // }
+        // //创建一个类用于继承
+        // class Son extends Father{};
+        // var son = new Son();
+        // son.money();
+    </script>
+</body>
+</html>

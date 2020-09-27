@@ -43,7 +43,7 @@ arr.length = 0; // 清空数组
 console.log(arr);
 
 var arr = [1, 2, 3, 4, 5, 6];
-//splice 方法去除3 索引号 去除的个数
+//splice 方法去除3 索引号 去除的个数  替换的项目
 
 console.log(arr.splice(2, 1)); //splice 返回的是去除的元素
 
